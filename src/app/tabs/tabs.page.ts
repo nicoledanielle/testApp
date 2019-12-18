@@ -13,7 +13,7 @@ export class TabsPage {
 
   public ngOnInit() {
     console.log('test');
-    this.http.get('https://rocket-rounding-staging.web.app/helloworld', {}, {}).then(data => {
+    this.http.get('https://us-central1-rocket-rounding-staging.cloudfunctions.net/test/helloworld', {}, {}).then(data => {
       console.log(data.status);
       console.log(data.data);
       console.log(data.headers);
