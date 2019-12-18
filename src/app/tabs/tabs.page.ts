@@ -12,6 +12,7 @@ export class TabsPage {
   constructor(private http: HTTP) {}
 
   public ngOnInit() {
+    console.log('test');
     this.http.get('https://community-open-weather-map.p.rapidapi.com/weather', {}, {}).then(_res => {
       console.log(_res);
     }).catch(err => {
