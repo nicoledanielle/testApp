@@ -13,10 +13,15 @@ export class TabsPage {
 
   public ngOnInit() {
     console.log('test');
-    this.http.get('https://community-open-weather-map.p.rapidapi.com/weather', {}, {}).then(_res => {
-      console.log(_res);
+    this.http.get('https://community-open-weather-map.p.rapidapi.com/weather', {}, {}).then(data => {
+      console.log(data.status);
+      console.log(data.data);
+      console.log(data.headers);
+
     }).catch(err => {
-      console.error(err);
+      console.error(err.status);
+      console.error(err.error);
+      console.error(err.headers);
     });
   }
 }
